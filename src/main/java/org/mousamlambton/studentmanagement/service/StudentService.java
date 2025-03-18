@@ -7,9 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+// Marking service annotation for dependency injection
 @Service
 public class StudentService {
-    private final List students = new ArrayList<>();
+    private final List<Student> students = new ArrayList<>();
     // Generate unique IDs for students
     private final AtomicInteger idGenerator = new AtomicInteger(1);
 
@@ -28,13 +29,5 @@ public class StudentService {
     // Delete a student by ID
     public boolean deleteStudent(Integer id) {
         return students.removeIf(student -> student.getId().equals(id));
-    }
-
-    // Find a student by ID
-    public Student findStudentById(Integer id) {
-        return students.stream()
-                .filter(student -> student.getId().equals(id))
-                .findFirst()
-                .orElse(null);
     }
 }
