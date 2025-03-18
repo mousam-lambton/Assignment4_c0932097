@@ -23,5 +23,7 @@ This Spring Boot application manages student information with features including
 1. Clone the repository.
 2. Navigate to the project directory.
 3. Open the project in intellij and run the application with the Run button.
+OR
+Run the Assignment4Application file's main method.
 ## Tests
 The tests are located in the test directory. To run the tests, navigate to the test directory and run the test classes individually._
